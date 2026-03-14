@@ -1,0 +1,16 @@
+name: REST
+description: REST (Representational State Transfer) is an architectural style for
+  designing networked applications that uses stateless communication and standard
+  HTTP methods to interact with resources identified by URLs. Its simplicity, scalability,
+  and alignment with the web's architecture have made it the dominant approach for
+  building web APIs.
+url: https://restfulapi.net/
+tags:
+- API
+- Web Services
+- Architecture
+- HTTP
+created: '2025'
+modified: '2025'
+apis: []
+common: []
