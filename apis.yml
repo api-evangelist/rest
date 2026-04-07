@@ -1,17 +1,12 @@
 aid: rest
 name: REST
-description: REST (Representational State Transfer) is an architectural style for
-  designing networked applications that uses stateless communication and standard
-  HTTP methods to interact with resources identified by URLs. Its simplicity, scalability,
-  and alignment with the web's architecture have made it the dominant approach for
-  building web APIs.
+description: REST (Representational State Transfer) is an architectural style for designing networked applications that uses stateless communication and standard HTTP methods to interact with resources identified by URLs. Its simplicity, scalability, and alignment with the web's architecture have made it the dominant approach for building web APIs.
 type: Index
 url: https://raw.githubusercontent.com/api-evangelist/rest/refs/heads/main/apis.yml
 tags:
-- API
-- Web Services
-- Architecture
-- HTTP
+  - Architecture
+  - HTTP
+  - Web Services
 created: '2025-01-01'
 modified: '2026-03-16'
 specificationVersion: '0.19'
