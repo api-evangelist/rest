@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "rest": "https://restfulapi.net/ns/",
+    "http": "http://www.w3.org/2011/http#",
+    "iana": "https://www.iana.org/assignments/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Resource": "rest:Resource",
+    "Representation": "rest:Representation",
+    "Endpoint": "schema:EntryPoint",
+    "API": "schema:WebAPI",
+    "Operation": "schema:Action",
+
+    "method": {
+      "@id": "http:method",
+      "@type": "xsd:string"
+    },
+    "path": {
+      "@id": "rest:path",
+      "@type": "xsd:string"
+    },
+    "statusCode": {
+      "@id": "http:statusCode",
+      "@type": "xsd:integer"
+    },
+    "mediaType": "schema:encodingFormat",
+    "description": "schema:description",
+    "name": "schema:name",
+    "version": "schema:version",
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "documentation": {
+      "@id": "schema:documentation",
+      "@type": "@id"
+    }
+  }
+}

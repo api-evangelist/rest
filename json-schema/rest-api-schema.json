@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/rest/json-schema/rest-api-schema.json",
+  "title": "REST API",
+  "description": "A schema representing the key properties and constraints of a RESTful API following the Representational State Transfer architectural style.",
+  "type": "object",
+  "required": ["baseUrl", "resources"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the REST API."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of the API's purpose and capabilities."
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the API.",
+      "examples": ["1.0.0", "2.1.0", "v3"]
+    },
+    "baseUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "The base URL of the API server."
+    },
+    "resources": {
+      "type": "array",
+      "description": "The resources exposed by the API.",
+      "items": {
+        "$ref": "#/$defs/Resource"
+      }
+    },
+    "authentication": {
+      "type": "object",
+      "description": "Authentication scheme used by the API.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["none", "apikey", "bearer", "basic", "oauth2"],
+          "description": "The authentication mechanism."
+        }
+      }
+    },
+    "formats": {
+      "type": "array",
+      "description": "Content formats supported by the API.",
+      "items": {
+        "type": "string",
+        "examples": ["application/json", "application/xml", "text/html"]
+      }
+    }
+  },
+  "$defs": {
+    "Resource": {
+      "type": "object",
+      "required": ["path"],
+      "description": "A named information resource identified by a URI path.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The resource name."
+        },
+        "path": {
+          "type": "string",
+          "description": "The URI path pattern (may include {parameter} templates)."
+        },
+        "methods": {
+          "type": "array",
+          "description": "HTTP methods supported by this resource.",
+          "items": {
+            "type": "string",
+            "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
+          }
+        }
+      }
+    }
+  }
+}

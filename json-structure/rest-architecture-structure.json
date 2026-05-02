@@ -1,0 +1,36 @@
+{
+  "title": "REST Architecture Structure",
+  "description": "JSON structure documenting the key concepts, constraints, and components of the REST architectural style.",
+  "version": "1.0.0",
+  "constraints": [
+    "Client-Server",
+    "Stateless",
+    "Cacheable",
+    "Uniform Interface",
+    "Layered System",
+    "Code on Demand (optional)"
+  ],
+  "uniformInterfaceConstraints": [
+    "Identification of Resources",
+    "Manipulation Through Representations",
+    "Self-Descriptive Messages",
+    "Hypermedia as the Engine of Application State (HATEOAS)"
+  ],
+  "httpMethods": {
+    "GET": { "safe": true, "idempotent": true, "cacheable": true, "purpose": "Read resource" },
+    "HEAD": { "safe": true, "idempotent": true, "cacheable": true, "purpose": "Read headers only" },
+    "OPTIONS": { "safe": true, "idempotent": true, "cacheable": false, "purpose": "Discover capabilities" },
+    "POST": { "safe": false, "idempotent": false, "cacheable": false, "purpose": "Create resource or action" },
+    "PUT": { "safe": false, "idempotent": true, "cacheable": false, "purpose": "Replace resource" },
+    "PATCH": { "safe": false, "idempotent": false, "cacheable": false, "purpose": "Partial update" },
+    "DELETE": { "safe": false, "idempotent": true, "cacheable": false, "purpose": "Delete resource" }
+  },
+  "statusCodeFamilies": {
+    "1xx": "Informational",
+    "2xx": "Success",
+    "3xx": "Redirection",
+    "4xx": "Client Error",
+    "5xx": "Server Error"
+  },
+  "relatedSpecs": ["RFC 9110", "RFC 9112", "OpenAPI 3.1", "JSON:API", "HAL", "SIREN"]
+}
